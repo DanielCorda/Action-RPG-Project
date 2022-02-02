@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    public AnimationCurve hoveringCurve;
+    public float hoveringForce;
+
     // Start is called before the first frame update
     void Start()
     {
