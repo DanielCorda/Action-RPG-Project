@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2160.4346, g: 2265.4492, b: 3305.457, a: 1}
+  m_IndirectSpecularColor: {r: 2023.8086, g: 1989.9141, b: 2396.5938, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -926,6 +926,13 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 128
+  hoveringCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  hoveringForce: 0
 --- !u!4 &871267635
 Transform:
   m_ObjectHideFlags: 0
@@ -1027,7 +1034,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071893055}
-  m_LocalRotation: {x: 0.19098951, y: -0.3670006, z: 0.07727029, w: 0.90711796}
+  m_LocalRotation: {x: 0.1909895, y: -0.3670006, z: 0.07727029, w: 0.90711796}
   m_LocalPosition: {x: 8.67, y: 7.653, z: -8.961}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1097,6 +1104,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2cc8030d92810bb4a921a9a1d5a1426a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 2cc8030d92810bb4a921a9a1d5a1426a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: fa5f0b3b38544954381fcccf76062ec0, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 2cc8030d92810bb4a921a9a1d5a1426a, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cc8030d92810bb4a921a9a1d5a1426a, type: 3}
@@ -1462,7 +1477,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1823688464}
-  m_LocalRotation: {x: 0.19098951, y: -0.3670006, z: 0.07727029, w: 0.90711796}
+  m_LocalRotation: {x: 0.1909895, y: -0.3670006, z: 0.07727029, w: 0.90711796}
   m_LocalPosition: {x: 8.67, y: 7.653, z: -8.961}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
