@@ -17,8 +17,11 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
-    public AnimationCurve hoveringCurve;
-    public float hoveringForce;
+    //public AnimationCurve hoveringCurve;
+    //public float hoveringForce;
+    float x;
+    float z;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -29,15 +32,23 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        move();       
+
+        animator.SetFloat("ForwardSpeed", this.velocity.y);
+        animator.SetFloat("SidewardSpeed", this.x);
+    }
+
+    public void move()
+    {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if(isGrounded && velocity.y < 0)
+        if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        this.x = Input.GetAxis("Horizontal");
+        this.z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
 
@@ -48,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        Debug.Log("velocity.y: "+ velocity.y);
+        Debug.Log("velocity.y: " + velocity.y);
 
         velocity.y += gravity * Time.deltaTime;
 
