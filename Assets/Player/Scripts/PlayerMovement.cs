@@ -34,8 +34,9 @@ public class PlayerMovement : MonoBehaviour
     {
         move();       
 
-        animator.SetFloat("ForwardSpeed", this.velocity.y);
-        animator.SetFloat("SidewardSpeed", this.x);
+        animator.SetFloat("ForwardSpeed", this.x);
+        animator.SetFloat("SidewardSpeed", this.z);
+        
     }
 
     public void move()
